@@ -1,0 +1,23 @@
+# Fork-local addition (not part of upstream). Complements BSData/check-datafiles
+# (schema/integrity only): fails a PR or push if a .cat/.gst file's content
+# changed without also bumping its revision="N" attribute above the base commit.
+name: Revision Gate
+on:
+  pull_request:
+  push:
+    branches: [master]
+jobs:
+  check-revisions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check datafile revisions were bumped
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            python3 scripts/check_revisions.py "${{ github.event.pull_request.base.sha }}" "${{ github.event.pull_request.head.sha }}"
+          else
+            python3 scripts/check_revisions.py "${{ github.event.before }}"
+          fi

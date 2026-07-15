@@ -1,0 +1,27 @@
+# Fork-local addition (not part of upstream). BSData/publish-catpkg only
+# generates catpkg.json as a release asset (on: release); this instead
+# verifies the committed catpkg.json on master stays in sync with every
+# datafile change — regenerates it in CI and fails if the committed version
+# is stale, rather than pushing commits automatically.
+name: Verify catpkg.json is up to date
+on:
+  pull_request:
+  push:
+    branches: [master]
+jobs:
+  verify-catpkg:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate catpkg.json
+        run: python3 scripts/generate_catpkg.py
+
+      - name: Fail if committed catpkg.json is stale
+        run: |
+          if ! git diff --quiet -- catpkg.json; then
+            echo "::error::catpkg.json is out of date. Run 'python3 scripts/generate_catpkg.py' and commit the result."
+            git diff -- catpkg.json
+            exit 1
+          fi
+          echo "catpkg.json is up to date."

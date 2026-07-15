@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="731d-5b13-2a92-5426" name="Ogre Kingdoms" revision="1" battleScribeVersion="2.03" authorName="Ergo Fargo, Jakub Kindl" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="731d-5b13-2a92-5426" name="Ogre Kingdoms" revision="2" battleScribeVersion="2.03" authorName="Ergo Fargo, Jakub Kindl" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="6" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>I dedicate this list to Sam Terris, Ogre general 
 Select the Dogs of War category if you are using Ogres as Dogs of War. Otherwise leave it alone. 
 </readme>
@@ -566,6 +566,9 @@ Select the Dogs of War category if you are using Ogres as Dogs of War. Otherwise
           <constraints>
             <constraint field="selections" scope="parent" value="2.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="aaaf-e84d-db9f-9e08" type="max"/>
           </constraints>
+          <costs>
+            <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="5.0"/>
+          </costs>
         </entryLink>
       </entryLinks>
       <costs>
@@ -2165,6 +2168,11 @@ Select the Dogs of War category if you are using Ogres as Dogs of War. Otherwise
           <conditions>
             <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b76c-6bad-4650-dbb0" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="increment" field="188e-3808-4b37-c8d9" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ed5-eacf-d55a-5e9e" repeats="1" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>

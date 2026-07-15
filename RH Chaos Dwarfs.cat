@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="3bc2-0f8c-cb9c-4a90" name="RH Chaos Dwarfs" revision="1" battleScribeVersion="2.03" authorName="Jakub Kurcek and Ergo Fargo" authorContact="jkurcek@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="3bc2-0f8c-cb9c-4a90" name="RH Chaos Dwarfs" revision="2" battleScribeVersion="2.03" authorName="Jakub Kurcek and Ergo Fargo" authorContact="jkurcek@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="756d-4758-8a13-1d8a" name="Ravening Hordes " shortName="RH" publicationDate=""/>
     <publication id="d22a-b2ad-8731-c6f7" name="Orc &amp; Goblins Army Book" shortName="O+G" publicationDate="2000"/>
@@ -2829,6 +2829,11 @@ Use the cannon misfire table if you roll a misfire and an arrow. However, if you
           <conditions>
             <condition field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="b76c-6bad-4650-dbb0" type="greaterThan"/>
           </conditions>
+        </modifier>
+        <modifier type="increment" field="8c44-1e38-e587-56cf" value="1.0">
+          <repeats>
+            <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="0ed5-eacf-d55a-5e9e" repeats="1" roundUp="false"/>
+          </repeats>
         </modifier>
       </modifiers>
       <constraints>
