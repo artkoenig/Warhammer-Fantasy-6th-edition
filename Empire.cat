@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="5c3d-7f54-5a40-6940" name="Empire" revision="11" battleScribeVersion="2.03" authorName="Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="5c3d-7f54-5a40-6940" name="Empire" revision="12" battleScribeVersion="2.03" authorName="Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <readme>Huntsmen do not count towards the MINIMUM core choice.</readme>
   <publications>
     <publication id="b61c-34ec-3be0-1b38" name="Empire Army Book 2000"/>
@@ -3889,7 +3889,16 @@
         <entryLink id="4d8b-d51e-b241-a417" name="Sword of Battle" hidden="false" collective="false" import="true" targetId="6e5a-eeea-ec67-3632" type="selectionEntry"/>
         <entryLink id="099e-250b-a57e-7027" name="Sword of Might" hidden="false" collective="false" import="true" targetId="8c56-9be1-c4a9-5afe" type="selectionEntry"/>
         <entryLink id="16b2-e865-d8ad-fb08" name="Sword of Striking" hidden="false" collective="false" import="true" targetId="6b55-e847-311d-d6ca" type="selectionEntry"/>
-        <entryLink id="51fd-61aa-c2be-7c20" name="Runefang" hidden="false" collective="false" import="true" targetId="564c-7f8a-80ed-b526" type="selectionEntry"/>
+        <entryLink id="51fd-61aa-c2be-7c20" name="Runefang" hidden="false" collective="false" import="true" targetId="564c-7f8a-80ed-b526" type="selectionEntry">
+          <modifiers>
+            <modifier type="set" value="true" field="hidden">
+              <comment>Elector Counts only (Runefang rule: "Elector Counts only")</comment>
+              <conditions>
+                <condition type="notInstanceOf" value="1" field="selections" scope="ancestor" childId="f58c-9606-507a-0542" shared="true" includeChildSelections="false" includeChildForces="false"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </entryLink>
         <entryLink id="1e3f-e0a6-a158-4cdd" name="The Mace Of Helstrum" hidden="false" collective="false" import="true" targetId="b4b5-d792-d3d1-4db1" type="selectionEntry"/>
         <entryLink id="6c6f-006a-85bb-49d3" name="Sword Of Fate" hidden="false" collective="false" import="true" targetId="689f-a8a5-9a74-6ee1" type="selectionEntry"/>
         <entryLink id="72a5-4b55-6755-42d7" name="Sword of Sigismund" hidden="false" collective="false" import="true" targetId="3e7d-a682-bc22-6b37" type="selectionEntry"/>
