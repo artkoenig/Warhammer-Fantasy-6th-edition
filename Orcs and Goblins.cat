@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b126-4acf-f567-bea6" name="Orcs and Goblins" revision="14" battleScribeVersion="2.03" authorName="Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b126-4acf-f567-bea6" name="Orcs and Goblins" revision="15" battleScribeVersion="2.03" authorName="Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7dda-637b-31ad-951c" name="Orc and Goblin Army Book 2000" shortName="O+G" publicationDate="2000"/>
   </publications>
@@ -19,6 +19,12 @@
     <categoryEntry id="8ac2-2417-ee1e-9b14" name="Magical standard boyz" hidden="false">
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="1994-c56f-9b1a-33bd" type="max"/>
+      </constraints>
+    </categoryEntry>
+    <categoryEntry id="b16b-9c33-4d0e-71aa" name="Big &apos;Uns" hidden="false">
+      <comment>Shared bracket for the army book's "only ever one unit of Big'Uns in any army".</comment>
+      <constraints>
+        <constraint field="selections" scope="force" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="5f2c-77e1-4a90-3db6" type="max"/>
       </constraints>
     </categoryEntry>
   </categoryEntries>
@@ -5540,10 +5546,11 @@
     </selectionEntry>
     <selectionEntry id="8787-293e-965a-f8c2" name="Orc Big &apos;uns Boar Boyz" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="increment" field="4ebf-ca55-1ef8-9431" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" childId="375d-151a-4ba1-a4e6" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="set" value="1.0" field="4ebf-ca55-1ef8-9431">
+          <comment>Big 'Uns: at least 5 normal Orc Boar Boyz models must be in the army</comment>
+          <conditions>
+            <condition type="atLeast" value="5.0" field="selections" scope="roster" childId="059d-2e0b-d1a6-75a7" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -5565,11 +5572,21 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="79a3-4806-9505-eb62" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
+        <categoryLink id="2a41-08c7-5be3-9f14" name="Big &apos;Uns" hidden="false" targetId="b16b-9c33-4d0e-71aa" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="3e79-d7fd-c555-56ea" name="Orc Boar Boyz" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" value="1.0" field="6e85-4c0b-9f27-d358">
+              <comment>Big 'Uns: one per normal Orc Boar Boyz model in the army</comment>
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="059d-2e0b-d1a6-75a7" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="923f-523d-ba3a-2831" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6e85-4c0b-9f27-d358" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="22.0"/>
@@ -5675,10 +5692,11 @@
     </selectionEntry>
     <selectionEntry id="eeb1-a6c4-b57e-f08c" name="Orc Big &apos;Uns" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="increment" field="938b-15b1-f433-e0d5" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="344f-77ef-7238-f157" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="set" value="1.0" field="938b-15b1-f433-e0d5">
+          <comment>Big 'Uns: at least 10 normal Orc Boyz models must be in the army</comment>
+          <conditions>
+            <condition type="atLeast" value="10.0" field="selections" scope="roster" childId="cef0-77ce-8158-32d4" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
       </modifiers>
       <constraints>
@@ -5693,11 +5711,21 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="1f37-c820-c986-ba41" name="New CategoryLink" hidden="false" targetId="64bf-efb4-9978-26df" primary="true"/>
+        <categoryLink id="3b52-19d8-6cf4-a025" name="Big &apos;Uns" hidden="false" targetId="b16b-9c33-4d0e-71aa" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="0d44-66f5-eae1-bb16" name="Big &apos;Uns" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" value="1.0" field="7f96-5d1c-a038-e469">
+              <comment>Big 'Uns: one per normal Orc Boyz model in the army</comment>
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="cef0-77ce-8158-32d4" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="cd53-8606-5530-dbe3" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7f96-5d1c-a038-e469" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="7.0"/>
@@ -5847,10 +5875,11 @@
     </selectionEntry>
     <selectionEntry id="c679-3389-ca76-2ea1" name="Savage Orc Boar Big &apos;Uns" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="increment" field="3f45-a5bb-0dda-6ef9" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="39c9-363a-dd54-8a84" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="set" value="1.0" field="3f45-a5bb-0dda-6ef9">
+          <comment>Big 'Uns: at least 5 normal Savage Orc Boar Boyz models must be in the army</comment>
+          <conditions>
+            <condition type="atLeast" value="5.0" field="selections" scope="roster" childId="1118-65a3-24be-132b" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -5871,11 +5900,21 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="e51a-66b2-3674-59de" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
+        <categoryLink id="4c63-2ae9-7d05-b136" name="Big &apos;Uns" hidden="false" targetId="b16b-9c33-4d0e-71aa" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="dfed-1871-769e-437e" name="Savage Orc Big &apos;Un  Boar Boyz" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" value="1.0" field="80a7-6e2d-b149-f57a">
+              <comment>Big 'Uns: one per normal Savage Orc Boar Boyz model in the army</comment>
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="1118-65a3-24be-132b" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="5.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7b80-f94a-91ab-fa42" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="80a7-6e2d-b149-f57a" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="21.0"/>
@@ -5984,10 +6023,11 @@
     </selectionEntry>
     <selectionEntry id="bbd3-eba1-8e8d-39c8" name="Savage Orc Big &apos;Uns" hidden="false" collective="false" import="true" type="unit">
       <modifiers>
-        <modifier type="increment" field="f98e-8656-b468-229e" value="1.0">
-          <repeats>
-            <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="5e83-d646-097c-dbee" repeats="1" roundUp="false"/>
-          </repeats>
+        <modifier type="set" value="1.0" field="f98e-8656-b468-229e">
+          <comment>Big 'Uns: at least 10 normal Savage Orc Boyz models must be in the army</comment>
+          <conditions>
+            <condition type="atLeast" value="10.0" field="selections" scope="roster" childId="e5fb-a639-766e-34e0" shared="true" percentValue="false" includeChildSelections="true" includeChildForces="true"/>
+          </conditions>
         </modifier>
         <modifier type="set" field="hidden" value="true">
           <conditions>
@@ -6008,11 +6048,21 @@
       </infoLinks>
       <categoryLinks>
         <categoryLink id="f4b8-cccb-7be7-d9d9" name="New CategoryLink" hidden="false" targetId="64bf-efb4-9978-26df" primary="true"/>
+        <categoryLink id="5d74-3bfa-8e16-c247" name="Big &apos;Uns" hidden="false" targetId="b16b-9c33-4d0e-71aa" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry id="2af6-91f6-008a-51e1" name="Savage Orc Big &apos;Uns" hidden="false" collective="false" import="true" type="model">
+          <modifiers>
+            <modifier type="increment" value="1.0" field="91b8-7f3e-c25a-068b">
+              <comment>Big 'Uns: one per normal Savage Orc Boyz model in the army</comment>
+              <repeats>
+                <repeat field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" childId="e5fb-a639-766e-34e0" repeats="1" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
           <constraints>
             <constraint field="selections" scope="parent" value="10.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1bb4-fd72-9a41-25a2" type="min"/>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="91b8-7f3e-c25a-068b" type="max"/>
           </constraints>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="8.0"/>
