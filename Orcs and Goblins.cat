@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue id="b126-4acf-f567-bea6" name="Orcs and Goblins" revision="15" battleScribeVersion="2.03" authorName="Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue id="b126-4acf-f567-bea6" name="Orcs and Goblins" revision="16" battleScribeVersion="2.03" authorName="Ergo Fargo" authorContact="ergofargo@gmail.com" library="false" gameSystemId="6d8e-38d9-3c69-febf" gameSystemRevision="8" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <publications>
     <publication id="7dda-637b-31ad-951c" name="Orc and Goblin Army Book 2000" shortName="O+G" publicationDate="2000"/>
   </publications>
@@ -254,6 +254,20 @@
           </costs>
         </selectionEntry>
         <selectionEntry id="630b-5fed-e243-f9a1" name="Netters" hidden="false" collective="false" import="true" type="upgrade">
+          <modifiers>
+            <modifier type="increment" value="1.0" field="24c3-d94b-98bc-4c73">
+              <comment>Bis zu einem Viertel der Einheit (Armeebuch)</comment>
+              <repeats>
+                <repeat value="4.0" repeats="1" field="selections" scope="parent" childId="dcc6-b146-709c-8e77" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+          <constraints>
+            <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="24c3-d94b-98bc-4c73" type="max"/>
+          </constraints>
+          <infoLinks>
+            <infoLink id="3f22-6dfd-4471-f716" name="Netters" hidden="false" targetId="c5de-bafa-d4fe-90a2" type="rule"/>
+          </infoLinks>
           <costs>
             <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="2.0"/>
             <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
@@ -265,6 +279,7 @@
             <constraint field="selections" scope="parent" value="3.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9bb4-efe6-2a71-87ed" type="max"/>
           </constraints>
           <infoLinks>
+            <infoLink id="9089-1133-8c5a-95ff" name="Fanatics" hidden="false" targetId="7fba-2833-0def-c010" type="rule"/>
             <infoLink id="dfd5-9ce4-9afb-466d" name="Fanatic" hidden="false" targetId="f00f-27f9-7204-9ad2" type="profile"/>
           </infoLinks>
           <costs>
@@ -564,6 +579,8 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="46e9-269c-cacd-7299" type="max"/>
               </constraints>
               <infoLinks>
+                <infoLink id="46e1-8de4-f8be-7226" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+                <infoLink id="96e8-bcd6-06c8-f053" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
                 <infoLink id="e607-1020-be0e-d0ea" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
               </infoLinks>
               <costs>
@@ -718,6 +735,8 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="93d4-5b67-4bd8-a00e" type="max"/>
               </constraints>
               <infoLinks>
+                <infoLink id="3684-252c-7c86-c897" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+                <infoLink id="22b8-c957-fb57-e554" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
                 <infoLink id="9dc4-5d74-c54a-5c2e" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
               </infoLinks>
               <costs>
@@ -789,6 +808,7 @@
         </profile>
       </profiles>
       <infoLinks>
+        <infoLink id="79a5-ceae-581a-211d" name="Frenzy: Savage Orcs " hidden="false" targetId="01cc-ed1b-58ba-0cd6" type="rule"/>
         <infoLink id="e402-8ed6-2383-f3a9" name="Ignore Goblin Panic" hidden="false" targetId="f457-297e-425b-75d4" type="rule"/>
         <infoLink id="7877-9d1a-4f88-965c" name="Choppa" hidden="false" targetId="ab83-3475-b1c7-aafa" type="rule"/>
         <infoLink id="9e28-0878-a1bf-6ece" name="Warpaint" hidden="false" targetId="e8d6-cd4a-7353-54a7" type="rule"/>
@@ -841,6 +861,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="f971-98c8-1cd8-18ef" type="max"/>
           </constraints>
           <infoLinks>
+            <infoLink id="14d2-3325-38b3-c314" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+            <infoLink id="a298-96c7-c33f-42f7" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
             <infoLink id="29cd-7937-99f1-b29d" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
           </infoLinks>
           <costs>
@@ -977,6 +999,8 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="de67-6b20-2334-17c2" type="max"/>
               </constraints>
               <infoLinks>
+                <infoLink id="49d2-733e-438c-77ed" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+                <infoLink id="142a-e05f-5b5e-fc8e" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
                 <infoLink id="4cd9-5b18-2dcd-c67c" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
               </infoLinks>
               <costs>
@@ -1100,6 +1124,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="0801-c9e1-5d2e-deae" type="max"/>
           </constraints>
           <infoLinks>
+            <infoLink id="3d9c-cd04-d544-b3fb" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+            <infoLink id="2b09-a729-a3cf-9606" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
             <infoLink id="1b64-baf6-145b-5937" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
           </infoLinks>
           <costs>
@@ -1605,6 +1631,7 @@
         </profile>
       </profiles>
       <infoLinks>
+        <infoLink id="23c4-b950-d09c-f961" name="Night Goblin Shaman Mushrooms" hidden="false" targetId="6dfb-8131-a002-39d4" type="rule"/>
         <infoLink id="ee62-9b1c-7aac-1db4" name="Fear Elves" hidden="false" targetId="b9cb-9cdd-44c3-ba52" type="rule"/>
         <infoLink id="f3ca-5a76-4d1a-8b9e" name="Hate Dwarfs" hidden="false" targetId="9d06-d305-182a-2eb9" type="rule"/>
       </infoLinks>
@@ -1846,6 +1873,8 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="6aab-cec4-e779-f7f6" type="max"/>
               </constraints>
               <infoLinks>
+                <infoLink id="dd56-ba75-bebd-7627" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+                <infoLink id="2a57-724f-3fd9-0d30" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
                 <infoLink id="0bf6-f21b-45b0-8aa1" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
               </infoLinks>
               <costs>
@@ -1930,7 +1959,7 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="997e-fd3c-d01d-9b43" name="Ignore Greenskin Panic: " hidden="false" targetId="47bc-b420-0136-87a8" type="rule"/>
+        <infoLink id="997e-fd3c-d01d-9b43" name="Ignore Goblin Panic" hidden="false" targetId="f457-297e-425b-75d4" type="rule"/>
         <infoLink id="86e0-439f-4755-4207" name="Choppa" hidden="false" targetId="ab83-3475-b1c7-aafa" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -2057,6 +2086,8 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d8fb-20e8-1f9a-3809" type="max"/>
               </constraints>
               <infoLinks>
+                <infoLink id="d11f-3402-bdf1-f91c" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+                <infoLink id="0863-f8af-7ab9-fc6b" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
                 <infoLink id="797f-a0e1-cebe-8a62" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
               </infoLinks>
               <costs>
@@ -2137,7 +2168,8 @@
         </profile>
       </profiles>
       <infoLinks>
-        <infoLink id="7564-1510-f66c-9a8d" name="Ignore Greenskin Panic: " hidden="false" targetId="47bc-b420-0136-87a8" type="rule"/>
+        <infoLink id="6919-fb2b-8f94-08ba" name="Frenzy: Savage Orcs " hidden="false" targetId="01cc-ed1b-58ba-0cd6" type="rule"/>
+        <infoLink id="7564-1510-f66c-9a8d" name="Ignore Goblin Panic" hidden="false" targetId="f457-297e-425b-75d4" type="rule"/>
         <infoLink id="4659-535a-1ebd-e50d" name="Choppa" hidden="false" targetId="ab83-3475-b1c7-aafa" type="rule"/>
       </infoLinks>
       <categoryLinks>
@@ -2178,6 +2210,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3367-7db3-a19e-3e2d" type="max"/>
           </constraints>
           <infoLinks>
+            <infoLink id="cd12-18e5-a066-4968" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+            <infoLink id="7f06-5099-4206-7562" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
             <infoLink id="20dd-a9aa-105b-0b40" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
           </infoLinks>
           <costs>
@@ -2336,6 +2370,8 @@
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="40bb-0a03-a195-9a11" type="max"/>
               </constraints>
               <infoLinks>
+                <infoLink id="7ab2-0697-4faa-a082" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+                <infoLink id="77a2-1764-3c11-0bbe" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
                 <infoLink id="778c-3f93-0092-68df" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
               </infoLinks>
               <costs>
@@ -2458,6 +2494,8 @@
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="1349-172d-6444-e4e0" type="max"/>
           </constraints>
           <infoLinks>
+            <infoLink id="ab7f-7161-34f0-732d" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+            <infoLink id="ab68-1c43-1a1a-ba1a" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
             <infoLink id="7b46-3988-3811-dac8" name="Boar" hidden="false" targetId="de91-b5e9-a96d-1f5a" type="profile"/>
           </infoLinks>
           <costs>
@@ -2986,6 +3024,7 @@
         </profile>
       </profiles>
       <infoLinks>
+        <infoLink id="2981-6c88-391c-deb2" name="Night Goblin Shaman Mushrooms" hidden="false" targetId="6dfb-8131-a002-39d4" type="rule"/>
         <infoLink id="7a60-8d50-288e-5957" name="Fear Elves" hidden="false" targetId="b9cb-9cdd-44c3-ba52" type="rule"/>
         <infoLink id="b47d-ba91-99e5-7908" name="Hate Dwarfs" hidden="false" targetId="9d06-d305-182a-2eb9" type="rule"/>
       </infoLinks>
@@ -3190,7 +3229,7 @@
                 <infoLink id="0ba0-841b-f19d-f2a5" name="Orc boss" hidden="false" targetId="e908-7e16-23f2-eb52" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="13.0"/>
+                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="15.0"/>
                 <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
                 <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0.0"/>
               </costs>
@@ -3487,7 +3526,7 @@
             </selectionEntry>
             <selectionEntry id="9942-7b31-d264-1a0e" name="Spears" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="ecfa-8486-4f6c-c249" value="1.0">
+                <modifier type="increment" field="ecfa-8486-4f6c-c249" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -4086,6 +4125,9 @@
         </modifier>
       </modifiers>
       <infoLinks>
+        <infoLink id="f085-6f25-e20c-ba20" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+        <infoLink id="cdc6-0b16-5d76-71d9" name="Animosity" hidden="false" targetId="23f9-c5d1-7c15-0c4c" type="rule"/>
+        <infoLink id="4686-68bd-6e97-14fb" name="Ignore Goblin Panic" hidden="false" targetId="f457-297e-425b-75d4" type="rule"/>
         <infoLink id="0f61-4e48-b4e0-b268" name="Orc basic" hidden="false" targetId="ca58-3c0f-8e25-c7ec" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Boar Boy"/>
@@ -4214,6 +4256,10 @@
         </modifier>
       </modifiers>
       <infoLinks>
+        <infoLink id="370e-1c56-89e3-93a0" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+        <infoLink id="9ac2-7a5e-c452-0fee" name="Animosity" hidden="false" targetId="23f9-c5d1-7c15-0c4c" type="rule"/>
+        <infoLink id="c693-e55a-9861-0390" name="Ignore Goblin Panic" hidden="false" targetId="f457-297e-425b-75d4" type="rule"/>
+        <infoLink id="08f7-d26e-e5ce-1bc8" name="Frenzy: Savage Orcs " hidden="false" targetId="01cc-ed1b-58ba-0cd6" type="rule"/>
         <infoLink id="de40-727a-c38f-09a0" name="Orc basic" hidden="false" targetId="ca58-3c0f-8e25-c7ec" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Boar Boy"/>
@@ -4340,6 +4386,9 @@
       <constraints>
         <constraint field="selections" scope="roster" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2fb1-228b-c0ea-97d5" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="2048-e6ae-4003-145c" name="Squig Herd" hidden="false" targetId="cb96-0027-e8e4-9732" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="f92e-c8ab-7747-19ae" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
         <categoryLink id="3a58-8faf-7ca3-23dc" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="false"/>
@@ -4374,6 +4423,17 @@
               </costs>
             </selectionEntry>
             <selectionEntry id="6f66-9a74-cae1-2443" name="Squig Hoppers" hidden="false" collective="false" import="true" type="model">
+              <modifiers>
+                <modifier type="increment" value="1.0" field="b912-1273-da59-4ff8">
+                  <comment>Max. ein Squig Hopper je volle drei Cave Squigs (Armeebuch)</comment>
+                  <repeats>
+                    <repeat value="3.0" repeats="1" field="selections" scope="parent" childId="9cdd-4203-c4e0-9c31" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <constraints>
+                <constraint field="selections" scope="parent" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b912-1273-da59-4ff8" type="max"/>
+              </constraints>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="18.0"/>
                 <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
@@ -4412,6 +4472,12 @@
         <categoryLink id="4a4a-b77c-e895-0f6c" name="New CategoryLink" hidden="false" targetId="43cc-fc3f-35a7-8d03" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="ec3f-7676-33c5-d011" name="Scythed wheels" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="7ff9-fb1c-04b7-7273" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="b501-dd41-92d8-c70f" type="max"/>
+          </constraints>
+        </selectionEntry>
         <selectionEntry id="custom-orc-chariot-save" name="Armour Save +4Sv" hidden="false" collective="false" import="true" type="upgrade">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="custom-orc-chariot-save-min" type="min"/>
@@ -4620,6 +4686,7 @@
         </profile>
       </profiles>
       <infoLinks>
+        <infoLink id="f238-2496-6248-be48" name="Troll Vomit" hidden="false" targetId="ccb4-4400-0b97-53c1" type="rule"/>
         <infoLink id="09e7-346a-8190-d375" name="Fear" hidden="false" targetId="1524-2372-4aa0-6881" type="rule"/>
         <infoLink id="4443-60b5-de2d-cb87" name="Stupidity" hidden="false" targetId="5d6f-7b4d-6093-4922" type="rule"/>
         <infoLink id="949a-6c37-6e20-0a6f" name="Regeneration" hidden="false" targetId="59c1-8a35-5a25-ebe1" type="rule"/>
@@ -4702,10 +4769,20 @@
           </conditions>
         </modifier>
       </modifiers>
+      <infoLinks>
+        <infoLink id="5e4d-e063-f8ec-33b9" name="Pump Wagon" hidden="false" targetId="5e9a-39c3-5fca-6294" type="rule"/>
+        <infoLink id="2181-610f-b889-c1a9" name="Unbreakable (snotling)" hidden="false" targetId="7efa-d975-da07-172c" type="rule"/>
+      </infoLinks>
       <categoryLinks>
         <categoryLink id="435d-e998-d74e-3f13" name="New CategoryLink" hidden="false" targetId="e94b-6a54-8779-cd60" primary="true"/>
       </categoryLinks>
       <selectionEntries>
+        <selectionEntry id="3273-220b-2e9f-d3bd" name="Armour Save +6Sv" hidden="false" collective="false" import="true" type="upgrade">
+          <constraints>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="4680-14c3-e276-94bd" type="min"/>
+            <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="efcf-0da3-c88c-8d3a" type="max"/>
+          </constraints>
+        </selectionEntry>
         <selectionEntry id="1553-549e-79a1-87b8" name="Pump Wagon" hidden="false" collective="false" import="true" type="model">
           <constraints>
             <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3b92-0d56-1a3f-fdf1" type="max"/>
@@ -5562,6 +5639,9 @@
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="true" id="4ebf-ca55-1ef8-9431" type="max"/>
       </constraints>
       <infoLinks>
+        <infoLink id="8b34-be83-03dd-55a5" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+        <infoLink id="0aeb-9090-ba4f-e164" name="Animosity" hidden="false" targetId="23f9-c5d1-7c15-0c4c" type="rule"/>
+        <infoLink id="11db-bd36-f040-293d" name="Ignore Goblin Panic" hidden="false" targetId="f457-297e-425b-75d4" type="rule"/>
         <infoLink id="9459-f37f-05ce-89ec" name="Orc Big Uns" hidden="false" targetId="25cf-7a47-8e60-e1d9" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Big &apos;Un Boar Boy"/>
@@ -5821,7 +5901,7 @@
                 <infoLink id="9e8b-64a6-ce5c-e8d4" name="Orc boss" hidden="false" targetId="e908-7e16-23f2-eb52" type="profile"/>
               </infoLinks>
               <costs>
-                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="13.0"/>
+                <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="15.0"/>
                 <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
                 <cost name=" Dispel Dice" typeId="6001-b2bf-4529-c07d" value="0.0"/>
               </costs>
@@ -5891,6 +5971,11 @@
         <constraint field="selections" scope="roster" value="0.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3f45-a5bb-0dda-6ef9" type="max"/>
       </constraints>
       <infoLinks>
+        <infoLink id="f3d8-c3e5-c892-c79d" name="Thick-skinned" hidden="false" targetId="bfbf-4333-b116-6475" type="rule"/>
+        <infoLink id="fef1-9a6a-be1f-29b1" name="Tuskar Charge" hidden="false" targetId="2761-5d2d-c41a-c536" type="rule"/>
+        <infoLink id="1803-2b27-4368-15d7" name="Animosity" hidden="false" targetId="23f9-c5d1-7c15-0c4c" type="rule"/>
+        <infoLink id="7781-5e81-7208-8e68" name="Ignore Goblin Panic" hidden="false" targetId="f457-297e-425b-75d4" type="rule"/>
+        <infoLink id="11bd-6287-50ad-daa3" name="Frenzy: Savage Orcs " hidden="false" targetId="01cc-ed1b-58ba-0cd6" type="rule"/>
         <infoLink id="5fdc-f329-097c-f91c" name="Orc Big Uns" hidden="false" targetId="25cf-7a47-8e60-e1d9" type="profile">
           <modifiers>
             <modifier type="set" field="name" value="Boar Boy"/>
@@ -6122,6 +6207,13 @@
               <constraints>
                 <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="053a-56f2-3d8e-3beb" type="max"/>
               </constraints>
+              <entryLinks>
+                <entryLink id="4c29-aafb-f066-abbe" name="Magical Standard" hidden="false" collective="false" import="true" targetId="0406-bb04-6134-2ee9" type="selectionEntryGroup">
+                  <constraints>
+                    <constraint field="ecfa-8486-4f6c-c249" scope="parent" value="50.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="9abd-a392-dd61-5f3c" type="max"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
               <costs>
                 <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="10.0"/>
                 <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
@@ -6164,7 +6256,7 @@
             </selectionEntry>
             <selectionEntry id="c28c-a6b6-ac68-0316" name="Spears" hidden="false" collective="false" import="true" type="upgrade">
               <modifiers>
-                <modifier type="increment" field="ecfa-8486-4f6c-c249" value="1.0">
+                <modifier type="increment" field="ecfa-8486-4f6c-c249" value="2.0">
                   <repeats>
                     <repeat field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="true" includeChildForces="false" childId="model" repeats="1" roundUp="false"/>
                   </repeats>
@@ -6234,6 +6326,7 @@
         </profile>
       </profiles>
       <infoLinks>
+        <infoLink id="6542-9cef-448b-75f6" name="Troll Vomit" hidden="false" targetId="ccb4-4400-0b97-53c1" type="rule"/>
         <infoLink id="1a7d-5703-5caa-6df3" name="Fear" hidden="false" targetId="1524-2372-4aa0-6881" type="rule"/>
         <infoLink id="9a10-2959-c5df-c3c4" name="Stupidity" hidden="false" targetId="5d6f-7b4d-6093-4922" type="rule"/>
         <infoLink id="8b70-b37a-c165-8094" name="Regeneration" hidden="false" targetId="59c1-8a35-5a25-ebe1" type="rule"/>
@@ -7022,6 +7115,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="d7d5-b857-61d8-0c18" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="2036-d973-30be-e908" name="MORK SAVE UZ!" hidden="false" targetId="5380-9eda-980e-fa18" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0.0"/>
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
@@ -7052,6 +7148,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="3edb-6226-97bf-b9bf" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="3398-6d8f-f296-2336" name="THE FOOT OF GORK" hidden="false" targetId="8ad7-7113-8364-4201" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0.0"/>
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
@@ -7062,6 +7161,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="18f1-3297-916f-95d6" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="a769-b951-9645-ab9a" name="GORK&apos;S WARPATH" hidden="false" targetId="f201-819b-d07c-f424" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0.0"/>
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
@@ -7072,6 +7174,9 @@
       <constraints>
         <constraint field="selections" scope="parent" value="1.0" percentValue="false" shared="true" includeChildSelections="false" includeChildForces="false" id="2b87-b66a-03ac-d88d" type="max"/>
       </constraints>
+      <infoLinks>
+        <infoLink id="b7d4-471f-0e0d-84f2" name="WAAAGH!" hidden="false" targetId="9bc1-304b-14d7-a512" type="rule"/>
+      </infoLinks>
       <costs>
         <cost name="pts" typeId="ecfa-8486-4f6c-c249" value="0.0"/>
         <cost name=" Casting Dice" typeId="fcec-2340-6368-a2ba" value="0.0"/>
@@ -7275,6 +7380,10 @@
       </entryLinks>
     </selectionEntryGroup>
     <selectionEntryGroup id="b7e2-ab17-22cd-10b6" name="LittleWaaagh" hidden="false" collective="false" import="true">
+      <infoLinks>
+        <infoLink id="916c-c8d3-a880-814d" name="Power of the Waaagh!" hidden="false" targetId="658d-08ac-6be4-2cf1" type="rule"/>
+        <infoLink id="6405-bf80-2446-0a68" name="Waaagh! Miscast Table" hidden="false" targetId="c7e4-20b6-b282-5533" type="rule"/>
+      </infoLinks>
       <entryLinks>
         <entryLink id="b58b-cb1f-9a0b-f094" name="1.Gaze of Mork" hidden="false" collective="false" import="true" targetId="c2cf-8f3a-6f9d-6e5c" type="selectionEntry"/>
         <entryLink id="a6e5-9588-f524-968a" name="2.Fist of Gork" hidden="false" collective="false" import="true" targetId="a034-cac5-4e39-600c" type="selectionEntry"/>
@@ -7321,8 +7430,11 @@
   </sharedSelectionEntryGroups>
   <sharedRules>
     <rule id="23f9-c5d1-7c15-0c4c" name="Animosity" publicationId="7dda-637b-31ad-951c" page="8" hidden="false">
-      <description>Subject to animosity
-</description>
+      <description>Orc and Goblin units of 5 or more models must test for Animosity at the end of the 'Start of the turn' phase. Units in close combat, fleeing units, units of fewer than 5 models, Black Orcs (they never squabble!), war machines, chariots, Trolls, Giants, Snotlings, released Fanatics and Squig Hoppers that have left their herd do not test; Squig Herds only test while they contain at least 5 Night Goblins.
+Roll a D6 for each unit that must test. On a 2-6 the test is passed and the unit acts normally. On a 1 the test is failed - immediately roll a further D6 on the table below:
+1 GET 'EM: Missile troops stand still and immediately shoot at the closest friendly squabbling greenskin unit in range and sight; the unit may do nothing else this turn. Other units immediately declare a charge against the closest squabbling Orc or Goblin unit: work out the fighting at once (remove casualties, then separate the units 1" apart; no combat result is calculated). Both units are then immobile for the rest of the turn. If no eligible target is in range and sight, treat this result as Squabble instead.
+2-5 SQUABBLE: A brawl breaks out in the ranks. The unit may not move, shoot or cast spells this turn.
+6 WE'LL SHOW 'EM: The unit immediately moves a full normal move (no march) towards the closest enemy unit; if this brings it into contact, it counts as charging. The Animosity then ends and the unit may act, charge, shoot and cast spells as normal for the rest of the turn.</description>
     </rule>
     <rule id="f457-297e-425b-75d4" name="Ignore Goblin Panic" publicationId="7dda-637b-31ad-951c" page="6" hidden="false">
       <description>Orcs expect the smaller greenskins to run awayy and it doesn&apos;t really surprise them when they do. The sight of fleeing Goblins and Snotlings simply reminds the bigger and bolder Orcs why they are best. Consequently when a Goblin unit. Snotling Swarm or Snotling Pump Wagon is destroyed, breaks or flees pat. Orc units do not need to test for panic. See the Viarhammer rulebook. pages 80-81</description>
@@ -7612,7 +7724,7 @@ The &apos;Itty Ring contains the &apos;Eadbutt spell described in the spells of 
       <description>The unit that carries Gook&apos;s Waaagh! banner adds + 1 to its Movement value (i.e. + on its normal move and +2&quot; on its charge and march) so long as it moves towards the closest enemy by the shortest route.</description>
     </rule>
     <rule id="d6e4-c6ed-bd48-6f2e" name="GUFF&apos;S FLAG" publicationId="7dda-637b-31ad-951c" page="33" hidden="false">
-      <description>The unit may re-roll one failed break test during the battle.</description>
+      <description>The unit may re-roll one failed Panic test during the battle.</description>
     </rule>
     <rule id="a222-066e-a74e-f255" name="NOGG&apos;S BANNER OF BUTCHERY" publicationId="7dda-637b-31ad-951c" page="33" hidden="false">
       <description>The unit carrying the Banner of Butchery may. once during the battle. add + 1 Attack to each model fighting tor that turn. In the case of mounted models only the rider gets the bonus, not the mount. Once used. the banner has no further effect.</description>
@@ -7653,6 +7765,57 @@ The Gaze of Mork is a magic missile with a range of up to 24&quot;. If successfu
     </rule>
     <rule id="2761-5d2d-c41a-c536" name="Tuskar Charge" hidden="false">
       <description>+2 St on charge</description>
+    </rule>
+    <rule id="bfbf-4333-b116-6475" name="Thick-skinned" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>A boar's hide is thick and tough. A model riding a war boar therefore adds +2 to its armour save rather than the usual +1 for riding a cavalry mount.</description>
+    </rule>
+    <rule id="ccb4-4400-0b97-53c1" name="Troll Vomit" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>Instead of making his normal 3 Attacks, a Troll can make a single vomit attack. The vomit hits automatically and causes one Strength 5 hit which ignores armour saves.</description>
+    </rule>
+    <rule id="5380-9eda-980e-fa18" name="MORK SAVE UZ!" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>CAST ON 5+
+If successfully cast, the player receives D3 re-rolls. Each re-roll may be used to re-roll any single D6 rolled by the greenskin player during his own turn. Re-rolls not used by the end of the turn are lost.</description>
+    </rule>
+    <rule id="8ad7-7113-8364-4201" name="THE FOOT OF GORK" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>CAST ON 9+
+This spell may target any single enemy unit on the battlefield, regardless of range or line of sight. If successfully cast, the unit is stamped flat by the Foot of Gork and suffers D6 Strength 6 hits.</description>
+    </rule>
+    <rule id="f201-819b-d07c-f424" name="GORK&apos;S WARPATH" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>CAST ON 10+
+Works exactly like The Foot of Gork: one enemy unit suffers D6 Strength 6 hits. Then roll a D6. On a 4+ Gork stomps onwards - another enemy unit suffers D6 Strength 6 hits, and you roll again after each unit. On a 2-3 the Warpath ends. On a 1 Gork treads on a greenskin unit instead: the opposing player chooses one unit of the caster's army, which suffers D6 Strength 6 hits, and the spell then ends.</description>
+    </rule>
+    <rule id="9bc1-304b-14d7-a512" name="WAAAGH!" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>CAST ON 12+
+When cast, every unit of Orcs, Goblins and Snotlings of the Shaman's own army that is able to charge immediately moves 2D6" towards the closest enemy unit. A unit that reaches the enemy counts as charging; the enemy may only hold as a charge reaction.</description>
+    </rule>
+    <rule id="658d-08ac-6be4-2cf1" name="Power of the Waaagh!" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>Orc and Goblin Shamans draw their power from the greenskins fighting around them. For each mob of at least 10 Orcs or at least 20 Goblins (of any type) that is engaged in close combat within 12" of the Shaman, the player receives +1 Power dice in his own Magic phase and +1 Dispel dice in the enemy's Magic phase. Enemy greenskin mobs fighting in close combat within 12" count as well!</description>
+    </rule>
+    <rule id="c7e4-20b6-b282-5533" name="Waaagh! Miscast Table" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>When an Orc or Goblin Shaman miscasts, roll a D6 on the table below. For each fleeing greenskin mob of 10+ Orcs or 20+ Goblins within 12" of the Shaman, roll one additional D6. Apply the LOWEST result rolled.
+1 The Shaman's head explodes! He is slain; every model in base contact suffers one Strength 10 hit.
+2 Raging Waaagh! energy: the Shaman bounces around like a loose Squig in each compulsory movement phase until he rolls a 6 at the start of a turn. He may not cast spells or use magic items, but still generates dice.
+3 The Shaman's body bursts open: he suffers D6 Strength 5 hits with no armour saves allowed.
+4 The Shaman's Wizard level is reduced by 1 and the spell he attempted is lost for the rest of the battle.
+5 The Shaman's mind is scrambled: one randomly determined spell is forgotten for the rest of the battle.
+6 Full Waaagh! power: the spell is cast with Irresistible Force! Roll again on this table afterwards - on a further 6 the Shaman may immediately cast another spell with Irresistible Force.</description>
+    </rule>
+    <rule id="6dfb-8131-a002-39d4" name="Night Goblin Shaman Mushrooms" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>Night Goblin Shamans eat magic mushrooms to boost their power. A Night Goblin Shaman carries 1 mushroom, a Night Goblin Great Shaman D3 mushrooms (roll at the start of the battle). After rolling the Casting dice for a spell, the Shaman may eat one mushroom to add +1D6 to the Casting result. If any mushroom dice rolls a 1, the Shaman immediately suffers a miscast!</description>
+    </rule>
+    <rule id="7fba-2833-0def-c010" name="Fanatics" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>Before the game, note down secretly which Night Goblin units contain Fanatics (up to 3 per unit). As soon as an enemy unit (including flyers) approaches within 8" of the unit, or the unit itself moves to within 8" of an enemy, ALL Fanatics in the unit are released at once: each is placed touching the unit and immediately moves 2D6" in a direction chosen by the controlling player. Any unit a Fanatic moves through suffers D6 Strength 5 hits with no armour saves allowed (test for Panic immediately if 25% casualties are caused). At the start of each subsequent compulsory movement phase, each Fanatic moves 2D6" in a random direction (Scatter dice); on a double the Fanatic throttles himself or slams into the ground and is removed as a casualty. A Fanatic that touches impassable terrain, an obstacle, the table edge or another Fanatic is destroyed immediately. Fanatics are Unbreakable; friendly troops may shoot at Fanatics.</description>
+    </rule>
+    <rule id="c5de-bafa-d4fe-90a2" name="Netters" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>Up to a quarter of the models in the unit may carry nets. Before the first round of a close combat, Netters in base contact throw their nets, rolling to hit as normal. Each enemy model hit suffers -1 Attack (to a minimum of 0) for that close combat phase; hits from several nets are cumulative. Riders and their mounts may be netted separately; special attacks are not affected. After throwing their nets the Netters drop them and fight on normally with their hand weapons or spears.</description>
+    </rule>
+    <rule id="cb96-0027-e8e4-9732" name="Squig Herd" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>The herd consists of Night Goblin herders, Cave Squigs and, if you wish, Squig Hoppers. Night Goblins may never be placed in the front rank in front of the Squigs.
+Loose Squigs: if at the start of a turn there are more than three Squigs per Night Goblin in the herd, or if the herd breaks or flees, all Squigs go loose: each immediately bounces 2D6" in a random direction (Scatter dice) and continues to do so in each compulsory movement phase. A loose Squig that hits a unit attacks it immediately. If a double is rolled for a loose Squig's move, it explodes and is removed.
+Squig Hoppers: in the compulsory movement phase a Squig Hopper may voluntarily bounce 2D6" out of the unit in a direction chosen by the player; on a double the rider falls off and the Squig goes loose.</description>
+    </rule>
+    <rule id="5e9a-39c3-5fca-6294" name="Pump Wagon" publicationId="7dda-637b-31ad-951c" hidden="false">
+      <description>The Pump Wagon moves 2D6" in each of its compulsory movement phases, steered as best the Snotlings can manage. If it hits an enemy unit it causes 2D6 Strength 4 impact hits. The Pump Wagon and its Snotling crew are Unbreakable.</description>
     </rule>
   </sharedRules>
   <sharedProfiles>
